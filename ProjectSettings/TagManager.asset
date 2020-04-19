@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wall
+  - Goal
+  - Coin
+  - Health
   layers:
   - Default
   - TransparentFX
@@ -40,4 +44,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 1753639155
+    locked: 0
+  - name: Wall
+    uniqueID: 1425968317
+    locked: 0
+  - name: Goal
+    uniqueID: 980010371
+    locked: 0
+  - name: Objects
+    uniqueID: 2750553271
+    locked: 0
+  - name: Player
+    uniqueID: 3522245065
     locked: 0
