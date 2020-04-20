@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Start()
     {
-        CurrentLevel = PlayerPrefs.GetInt("Level", 0);
+        CurrentLevel = PlayerPrefs.GetInt("Level", 1);
 
         _currentLife = PlayerPrefs.GetFloat("Life", 1f);
         _currentScore = PlayerPrefs.GetInt("Score", 0);
@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour
         _scoreView.CurrentScore = _currentScore;
         
         PlayerPrefs.DeleteAll();
+
+        var backgroundMusic = Camera.main.GetComponent<AudioSource>();
+        backgroundMusic.Play();
         
         _startupDisplay.SetActive(false);
         IsGameRunning = true;

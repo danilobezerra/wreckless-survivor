@@ -63,7 +63,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Time waits for no one...
+  m_text: Press Any Key to Continue...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 30812b6785dd85049806a407e6cc613d, type: 2}
   m_sharedMaterial: {fileID: 21661996764553932, guid: 30812b6785dd85049806a407e6cc613d,
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 3734200335612088184}
-    characterCount: 24
+    characterCount: 28
     spriteCount: 0
     spaceCount: 4
     wordCount: 5

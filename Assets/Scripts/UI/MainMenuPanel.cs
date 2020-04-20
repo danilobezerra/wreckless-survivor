@@ -15,7 +15,12 @@ public class MainMenuPanel : MonoBehaviour
 
     [SerializeField]
     private string _sceneToLoad;
-    
+
+    private void Start()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
     private void Update()
     {
         if (Input.anyKey) {

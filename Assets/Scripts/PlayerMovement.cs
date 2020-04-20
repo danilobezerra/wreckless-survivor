@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private string _tagCoin = "Coin";
     [SerializeField] private string _tagHealth = "Health";
 
+    [SerializeField] private AudioClip[] _sounds;
+
     [SerializeField] private float _moveFactor = 1f;
     [SerializeField] private float _moveSpeed = 2.5f;
     [SerializeField] private float _gridSize = 1f;
@@ -36,9 +38,10 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Move(Vector2 input)
     {
         IsMoving = true;
+        GetComponent<AudioSource>().PlayOneShot(_sounds[0]);
 
         if (GameManager.Instance.IsGameRunning) {
-            GameManager.Instance.DepleteLife(.1f);
+            GameManager.Instance.DepleteLife(0.05f);
         }
 
         var startPosition = transform.position;
@@ -64,11 +67,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (hit.collider.CompareTag(_tagWall)) {
             // TODO: Play wall bump sound
+            //GetComponent<AudioSource>().PlayOneShot(_sounds[1]);
             return false;
         }
 
         if (hit.collider.CompareTag(_tagGoal)) {
             if (GameManager.Instance.IsGameRunning) {
+                GetComponent<AudioSource>().PlayOneShot(_sounds[2]);
                 StartCoroutine(GameManager.Instance.LevelComplete());
             }
 
@@ -77,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (hit.collider.CompareTag(_tagCoin)) {
             if (GameManager.Instance.IsGameRunning) {
+                GetComponent<AudioSource>().PlayOneShot(_sounds[3]);
                 GameManager.Instance.ImproveScore(100);
                 // TODO: Play coin caught sound
 
@@ -86,10 +92,10 @@ public class PlayerMovement : MonoBehaviour
             return true;
         }
 
-        if (hit.collider.CompareTag(_tagHealth))
-        {
+        if (hit.collider.CompareTag(_tagHealth)) {
             if (GameManager.Instance.IsGameRunning) {
-                GameManager.Instance.ReplenishLife(0.05f);
+                GetComponent<AudioSource>().PlayOneShot(_sounds[4]);
+                GameManager.Instance.ReplenishLife(0.1f);
                 // TODO: Play cure sound
 
                 Destroy(hit.collider.gameObject);

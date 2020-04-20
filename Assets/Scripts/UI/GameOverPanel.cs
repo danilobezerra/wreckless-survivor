@@ -23,7 +23,6 @@ public class GameOverPanel : MonoBehaviour
     private IEnumerator RestartGame()
     {
         var loadingTitle = SceneManager.LoadSceneAsync(_titleScene);
-        PlayerPrefs.DeleteAll();
 
         while (!loadingTitle.isDone) {
             Debug.Log("Restart game...");

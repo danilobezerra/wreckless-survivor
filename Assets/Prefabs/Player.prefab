@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -772722231
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1acdbf737c5c919449796f9991e39cfd, type: 3}
   m_Color: {r: 0, g: 0, b: 1, a: 1}
@@ -135,6 +135,13 @@ MonoBehaviour:
   _tagWall: Wall
   _tagGoal: Finish
   _tagCoin: Coin
+  _tagHealth: Health
+  _sounds:
+  - {fileID: 8300000, guid: 5238d99b560c57a4bb23cc091387bccf, type: 3}
+  - {fileID: 8300000, guid: 70bc960515f19c9499e9e53740597bb8, type: 3}
+  - {fileID: 8300000, guid: 7aad517a71fc33242b92fb99859aa9d3, type: 3}
+  - {fileID: 8300000, guid: 1fdaf1e4039cc224b961d0b501184657, type: 3}
+  - {fileID: 8300000, guid: 58d7c3ba1118c474bae671ff709fab53, type: 3}
   _moveFactor: 1
   _moveSpeed: 2.5
   _gridSize: 1
