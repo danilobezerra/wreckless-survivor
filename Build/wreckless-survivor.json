@@ -1,0 +1,13 @@
+{
+"companyName": "Danilo Bezerra",
+"productName": "Wreckless Survivor",
+"dataUrl": "wreckless-survivor.data.unityweb",
+"wasmCodeUrl": "wreckless-survivor.wasm.code.unityweb",
+"wasmFrameworkUrl": "wreckless-survivor.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}
