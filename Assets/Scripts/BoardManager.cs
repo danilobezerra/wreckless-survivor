@@ -37,6 +37,7 @@ public class BoardManager : MonoBehaviour
 
         if (www.isNetworkError || www.isHttpError) {
             Debug.LogError(www.error);
+            GameManager.Instance.GameOverByContent();
         } else {
             input = www.downloadHandler.text;
         }
