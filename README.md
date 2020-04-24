@@ -1,6 +1,6 @@
 # Wreckless Survivor
 
-Ludum Dare 46 – Theme: Keep it alive
+[Ludum Dare 46 – Theme: Keep it alive](https://ldjam.com/events/ludum-dare/46/wreckless-survivor)
 
 ## Objectives
 
